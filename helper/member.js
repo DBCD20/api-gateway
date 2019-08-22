@@ -3,13 +3,13 @@ const fetch = require('node-fetch');
 
 //HANDLE GET MEMBER
 exports.getMembers = () => {
-    return fetch(`http://localhost:3002/api/members`)
+    return fetch(`https://dso-member-service.herokuapp.com/api/members`)
     .then(res => res.json())
 }
 
 //HANDLE ADD MEMBER
 exports.addMember = req => {
-    return fetch(`http://localhost:3002/api/members/`, {
+    return fetch(`https://dso-member-service.herokuapp.com/api/members/`, {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json', 
@@ -19,7 +19,7 @@ exports.addMember = req => {
 }
 //HANDLE EDIT MEMBER
 exports.editMember = (req, id) => {
-    return fetch(`http://localhost:3002/api/members/${id}`, {
+    return fetch(`https://dso-member-service.herokuapp.com/api/members/${id}`, {
                 method: 'PUT',
                 headers: {
                 'Content-Type': 'application/json', 
@@ -29,7 +29,7 @@ exports.editMember = (req, id) => {
 }
 //HANDLE DELETE MEMBER
 exports.delMember = id => {
-    return fetch(`http://localhost:3002/api/members/${id}`, {
+    return fetch(`https://dso-member-service.herokuapp.com/api/members/${id}`, {
                 method: 'DELETE', })
             .then(res => res.json())
 }

@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 
 //HANDLE USER SIGN UP
 exports.userSignUp = req => {
-    return fetch(`http://localhost:3003/api/auth/signup`, {
+    return fetch(`https://dso-auth-service.herokuapp.com/api/auth/signup`, {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json', 
@@ -12,7 +12,7 @@ exports.userSignUp = req => {
 }
 //HANDLE USER LOGIN
 exports.userSignIn = req => {
-    return fetch(`http://localhost:3003/api/auth/signin`, {
+    return fetch(`https://dso-auth-service.herokuapp.com/api/auth/signin`, {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json', 
