@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 
 
 app.use('/api/user', userRoute);
-app.use('/api/members', membersRoute);
+app.use('/api/members',isLoggedin, membersRoute);
 // app.use('/api/members',isLoggedIn, membersRoute);
 
 
